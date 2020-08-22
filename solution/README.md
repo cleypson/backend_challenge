@@ -68,13 +68,13 @@ About the API:
 | URL                                |  Method  | Params  | Description      |
 |------------------------------------|:--------:|:--------|-----------------|
 | /api/v1/cars/                      |    GET   |    -    | List all cars         |
-| /api/v1/cars/{id}/                 |    GET   |    -    | Get one car           |
-| /api/v1/cars/{id}/create_tyre/     |    POST  |    -    | Create a new car      |
-| /api/v1/cars/{id}/get_car_status/  |    POST  |    -    | Get car status        |
+| /api/v1/cars/create_car            |    POST  |    -    | Create a new car and return his status |
+| /api/v1/cars/{id}/                 |    GET   |    -    | Get one car                  |
+| /api/v1/cars/{id}/create_tyre/     |    POST  |    -    | Create or replace tyres      |
+| /api/v1/cars/{id}/get_car_status/  |    POST  |    -    | Get car status               |
 | /api/v1/cars/{id}/maintenance/     |    POST  |{"replace_part": "_tyre"} <br/> {"replace_part": "_fuel"}   | Return info abouts the tyres or percetage of fuel      |
 | /api/v1/cars/{id}/refuel/          |    POST  |{"quantity": 32}  | Return the current percetage of the car tank  |
-| /api/v1/cars/{id}/trip/            |    POST  |{"distance": 282. | Return the Car and Trip infos      |
-| /api/v1/cars/{id}/trip/            |    POST  |{"distance": 282. | Return the Car and Trip infos      |
+| /api/v1/cars/{id}/trip/            |    POST  |{"distance": 282.2} | Return the Car and Trip infos      |
 | /api/v1/tyres/                     |    GET   |    -             | List all tyres           |
 | /api/v1/tyres/{id}/                |    GET   |    -             | Get one tyre             |
 | /api/v1/tyres/create_tyre/         |    POST  |    -             | Create a new Tyre        |
