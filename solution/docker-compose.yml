@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    build: db
+    restart: always
+    environment:
+      POSTGRES_USER: backend_challenge
+      POSTGRES_PASSWORD: 9quxdHbm
+      POSTGRES_DB: backend_challenge
+    volumes:
+      - './db/data:/var/lib/postgresql/data'
+    ports:
+      - '5434:5432'
+  web:
+    build: src
+    image: python
+    command: 'python manage.py runserver 0.0.0.0:8100'
+    volumes:
+      - './src:/app/'
+    ports:
+      - '3000:3000'
+      - '8100:8100'
+    depends_on:
+      - db

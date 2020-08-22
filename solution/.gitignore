@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Distribution / packaging
+.Python
+.venv
+
+# Django stuff:
+*.log
+*.sqlite3
+backup.json
+
+#VSCode
+.vscode
+
+# PostgreSQL Docker data
+db/data/
